@@ -293,7 +293,7 @@ const Index = () => {
             {cursorClicked && (
               <div className="absolute inset-0 bg-black animate-pixel-fade-in flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" 
+                  src="/public/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" 
                   alt="REWIND Logo" 
                   className="h-24 mb-4" 
                 />
@@ -409,7 +409,7 @@ const Index = () => {
                 <div className="md:w-1/3">
                   <div className="win95-inset p-3 h-full">
                     <img 
-                      src="/lovable-uploads/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" 
+                      src="/public/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" 
                       alt="REWIND Logo" 
                       className="w-full max-w-[180px] mx-auto mb-4" 
                     />
@@ -464,7 +464,7 @@ const Index = () => {
               <div className="p-4 text-center">
                 <div className="flex justify-center mb-4">
                   <img 
-                    src="/lovable-uploads/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" 
+                    src="/public/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" 
                     alt="REWIND Logo" 
                     className="h-16" 
                   />

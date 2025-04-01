@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
-              <img src="/lovable-uploads/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" alt="REWIND Logo" className="h-12 mr-3" />
+              <img src="/public/6ba56f38-e3db-421f-a932-0a07bfd09d79.png" alt="REWIND Logo" className="h-12 mr-3" />
               <div>
                 <h3 className="font-pixel text-xl text-[#FF5E5B]">REWIND</h3>
                 <p className="text-xs text-gray-400">Memory Lane Retro Edition</p>
