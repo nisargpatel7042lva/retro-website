@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91.2% 59.8%;
+    --primary-foreground: 0 0% 100%; 
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-white/10 selection:text-white;
+    cursor: url("/lovable-uploads/88110f98-7939-4771-aff3-762dd039e057.png"), auto;
+  }
+  
+  body {
+    @apply bg-[#0F4C81] text-foreground antialiased font-mono;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVGhD7ZlbqFRVGMfXOafMjFLqRFReQsUKK6KSHvIh6KGXLg9Cz0FQdCGjpIKgHroQERQFET1kgdBNzAoDhQQfvDRJ9hBqF7XjLcv2+f2/tUY3Z+bs2fvMXrNm4vxhwZz1fWvvNXvttddflxjzn2EA6q/uHcZ83Gv8aWzxspeNdVV3LrnF/jaijCs5YlxXdW/TfOQeI7Tao77lTVU3Quu8Z/DtvRtnG9ggfQFpnmjcZ2TpV6M/9X0Y18sSWW6wF2S3cb6RpU+NS0K7nNuNXCLs+VWGVxs3G1kaZ1xaduei/DTvN+KWCzrR2GxkiX3sTmOJkaVDxuRQzmdzYYrxpJGl3cbkrtjx+jcwJ3SyxSGHW03WR3o+ZrJ1SpmQawkuDSVf1NkfGcwFLrS445Weh9cNVnhZrYEXjdDpTlYE7xuh050Lq+4MeCqUfNH37q26M+BD46mq29Ic5GTjc2OFl9Uym41nQ8mXiTjwZIN9JvVr/2T8ZNxgZGmCcbzqzoAbjMOhVKtTTxtMwrwwBR3L5BZjZuqBQXUizyXGF3UvJXxtLEstbRYZXxqxMB9weLb1BtcmWIHvjLnCy6X+QHsNJvv8qjtyXOhw8tGvWO/HOo/z8JzxsDF36g5FTwsRRX4Qpkx9r/OmQUsn6UEDWSJsNKYI/KG3hVKt6YFWMDwJDGe7MaWs5Yh/MfiJ+NdB4wXjKkNJdxgcpU8L5bgwzJJEjplMTJwGphuM7zeNXE0wYtwhsMCJO7FoMUc+MjguPG4saIodL9Y7rGe0cjtJpI8NduQlRr94MdRY2JwcyjFbDSbxEuF4T9yJRYtbDU70rARzPQ3h/VDuH5h8IpNvDfb0mFYbQ0Y4Qy0LtcJgJTYc0TJvGZ8Z9D8Y7P/k38y8ZlCHyMcGl2lim41U2Ps53CmZe1z7YCmcS7QYK8BThnAGjpfhGp8aO4zo+9d4xIgxnJ8z7jb4C8vS25uQd42TRiyDSIx9i9XjYiOWJcKTRFYa1MGzRpZeDCWNRuMvZOpzPWm3+x4AAAAASUVORK5CYII=");
+  }
+
+  html {
+    @apply scroll-smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #FDB44B #0F4C81;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(15, 76, 129, 0.7);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #FDB44B;
+    border-radius: 0;
+    border: 1px solid #000;
+  }
+
+  a, button, input[type="button"], input[type="submit"] {
+    cursor: url("/lovable-uploads/88110f98-7939-4771-aff3-762dd039e057.png"), pointer;
+  }
+
+  input[type="text"], textarea {
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzRCODE0QzRCQzJGMTFFQUFBQTlGMUFCMzJENEE0QkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzRCODE0QzVCQzJGMTFFQUFBQTlGMUFCMzJENEE0QkMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNEI4MTRDMkJDMkYxMUVBQUFBOUYxQUIzMkQ0QTRCQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNEI4MTRDMkJDMkYxMUVBQUFBOUYxQUIzMkQ0QTRCQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtFN/dIAAAJJSURBVHja7JbPS8JwGMbdj+2HmZWYYGQkCdb/ECF0DjpkBxG66BAEHTt06T8wokPUoUt06T8IPOSlDlEgEQSSdghSg0hoWluv74xRSzfdsE1f+LDt+77ffZ59t+/7TqdDR8vHVAkKtRDXcb9gTKv5FJeZfJaVmUKKbLrC2lKb+CT1+sfpqXgLvHO4cQs+gWOAR/bi4FDmcxuoR3HhJKyDQ7ABxhrcD4JtsAy2wA5YBTEcH4MVsAl2QQbM6/5qDhaYQz0BvoG3QH8ix7fgE+xBsL8W8/pYwBxqjZdEpz3QTbomvg8COXIFgBSYU/DHQDRRe7BQBxF0Igyyo/olbgdQUjTSRRoVZvHmlpZSC/gndDtOnU+rfea1nlaYHTLcbyNqU8DV9CmUeEozQdzsKLnFcvoNH8wOdkOb4ATMtingojolM7vZYCcElGD3tlXbFCB3O8wum02T0Z8TUAJKEm9Z4L2NcaJkJnNmW5RoXoDOplVmJwRUwOH8MfGbAk58JquZnRBQAoWajnYFCH6HWT88wOzBNgUkQZzZh+AQTOu+5EYI7TEZjYb1SISdLxRJ97QPRPFNeGG2Efu4NvS8OqUzq1e6yez57XAuc1BrllhcXnuMq4cPAvNtCFQx8xf46TK5gKhRDZ/qBPXTDQF5rBNtC6mvBbkG541uiedACsfkfgTBNRIQN/SYB9vgCNMZBBdgG/wLUVI3C5LgIUQCJCJtMMf3QPTsGXyA5xY9ewav4KkXP0dt/TvWRwALLcYMCw3GPAoIBAIBAYGAgEBAQCDQHL8CDAD/K79aL95oewAAAABJRU5ErkJggg=="), text;
+  }
+}
+
+/* Windows 95/XP style components */
+@layer components {
+  .win95-window {
+    @apply bg-[#1E1E1E] border-2 shadow-win95-outset;
+  }
+
+  .win95-window-title {
+    @apply bg-[#0F4C81] text-white font-pixel text-xs py-0.5 px-2 flex justify-between items-center;
+  }
+
+  .win95-button {
+    @apply bg-[#C0C0C0] border-2 shadow-win95-outset px-4 py-1 text-black active:shadow-win95-inset hover:bg-gray-300 transition-colors duration-100;
+  }
+
+  .win95-inset {
+    @apply bg-[#1E1E1E] border-2 shadow-win95-inset;
+  }
+
+  .win95-taskbar {
+    @apply bg-[#C0C0C0] border-t-2 border-white shadow-win95-outset flex items-center px-1 py-1;
+  }
+
+  .win95-start-button {
+    @apply flex items-center bg-[#C0C0C0] border-2 shadow-win95-outset px-2 py-0.5 text-black mr-2 active:shadow-win95-inset hover:bg-gray-300 transition-colors duration-100;
+  }
+
+  .crt-effect {
+    @apply relative overflow-hidden;
+  }
+
+  .crt-effect::before {
+    content: "";
+    @apply absolute top-0 left-0 right-0 bottom-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.2)_50%)] bg-[length:100%_4px] pointer-events-none z-50;
+  }
+
+  .crt-effect::after {
+    content: "";
+    @apply absolute top-0 left-0 right-0 h-[10px] bg-[rgba(255,255,255,0.1)] animate-scanline pointer-events-none z-50;
+  }
+
+  .pixel-border {
+    @apply border-2 border-b-[#000] border-r-[#000] border-t-white border-l-white;
+  }
+
+  .win95-progress {
+    @apply bg-white border shadow-win95-inset h-4 overflow-hidden;
+  }
+
+  .win95-progress-bar {
+    @apply bg-[#FF5E5B] h-full transition-all duration-500;
+  }
+  
+  /* Retro effects */
+  .retro-glow {
+    @apply relative;
+    text-shadow: 0 0 5px #FDB44B, 0 0 10px #FDB44B;
+  }
+  
+  .retro-scanline {
+    @apply relative overflow-hidden;
+  }
+  
+  .retro-scanline::after {
+    content: "";
+    @apply absolute top-0 left-0 right-0 bottom-0 pointer-events-none;
+    background: repeating-linear-gradient(to bottom, transparent, transparent 1px, rgba(0,0,0,0.05) 1px, rgba(0,0,0,0.05) 2px);
+    animation: scanline 10s linear infinite;
+  }
+  
+  .glitch-text {
+    @apply relative inline-block;
+    animation: glitch 3s infinite;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 640px) {
+    .win95-window {
+      @apply w-[95vw] mx-auto;
+    }
+    
+    .win95-button {
+      @apply px-2 py-1 text-xs;
+    }
+    
+    .win95-taskbar {
+      @apply flex-wrap py-2;
+    }
+  }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes pixel-fade-in {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+.animate-pixel-fade-in {
+  animation: pixel-fade-in 0.3s ease-out;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
