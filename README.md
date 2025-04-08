@@ -1,12 +1,12 @@
 # REWIND - A Nostalgic Journey Back to the 90s Web
 
-![REWIND Logo](https://drive.google.com/uc?export=view&id=FILE_ID1q8feaWeGB92bdx2P49nHnWutirevlbgM)
+![REWIND Logo](Screenshot%202025-04-01%20213552.png)
 
 ## 🖥️ About REWIND
 
 REWIND is a meticulously crafted web experience that takes you back to the golden era of personal computing. This project captures the authentic look and feel of Windows 98-era interfaces, complete with pixelated graphics, classic color schemes, and that unmistakable retro charm that defined the early internet.
 
-More than just a visual homage, REWIND creates an interactive time capsule where users can rediscover the simplicity and distinctive aesthetic of computing's formative years.
+More than just a visual homage, REWIND creates an interactive time capsule where users can rediscover the simplicity and distinctive aesthetic of computing's formative years. Connect your Google Photos and rediscover your memories in retro style.
 
 ## ✨ Features
 
@@ -14,8 +14,21 @@ More than just a visual homage, REWIND creates an interactive time capsule where
 - **Period-Accurate Color Palette** - The unmistakable grays, blues, and beiges that defined an era
 - **Interactive Desktop Environment** - Clickable icons, start menu, and functioning windows
 - **Nostalgic Sound Effects** - From system startups to error messages
-- **Classic Web Elements** - Under construction GIFs, visitor counters, and guestbooks
+- **Photo Library** - Browse your photos with our retro file explorer
+- **Video Memories** - Watch your favorite moments with nostalgic Windows Media Player
+- **Timeline View** - Scroll through your memories organized by time
 - **Responsive Design** - Retro aesthetics with modern functionality that works across devices
+
+## 🖼️ Screenshots
+
+### Memory Showcase
+![REWIND Memory Showcase](Screenshot%202025-04-08%20210807.png)
+
+### Memory Features
+![REWIND Features](Screenshot%202025-04-08%20210819.png)
+
+### About REWIND
+![About REWIND](Screenshot%202025-04-08%20210830.png)
 
 ## 🛠️ Technologies Used
 
@@ -24,12 +37,6 @@ More than just a visual homage, REWIND creates an interactive time capsule where
 - JavaScript (vanilla JS for authenticity)
 - Custom pixel fonts
 - SVG icons designed to match the Windows 98 aesthetic
-
-## 🖼️ Screenshots
-
-![REWIND Desktop](https://drive.google.com/uc?export=view&id=FILE_ID/1f_jlWDANy5lnEtE2UcoLb_98e6FEoFIv)
-![REWIND Features](https://drive.google.com/uc?export=view&id=FILE_ID1LEvyZe2z5UDQmuiQEaQqSVj10CHtFRnz)
-![About REWIND Applications](https://drive.google.com/uc?export=view&id=FILE_ID1LEvyZe2z5UDQmuiQEaQqSVj10CHtFRnz)
 
 ## 🚀 Getting Started
 
@@ -40,7 +47,7 @@ More than just a visual homage, REWIND creates an interactive time capsule where
 
 2. Open `index.html` in your browser to begin your nostalgic journey
 
-3. Alternatively, visit the live site at [Rewind Website](https://rewind-ten.vercel.app/)
+3. Alternatively, visit the live site at [https://yourusername.github.io/rewind](https://yourusername.github.io/rewind)
 
 ## 💾 Installation
 
@@ -77,7 +84,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Questions? Ideas? Just want to share your nostalgic memories? Reach out to me at:
 
 - Email: nisargpatel_5565@outlook.com
-- Twitter: [@NisargPatel5563](https://x.com/NisargPatel5563)
+- Twitter: [@NisargPatel5563](https://twitter.com/NisargPatel5563)
 
 ---
 
