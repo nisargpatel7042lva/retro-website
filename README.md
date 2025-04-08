@@ -1,6 +1,6 @@
 # REWIND - A Nostalgic Journey Back to the 90s Web
 
-![REWIND Logo](https://drive.google.com/file/d/1q8feaWeGB92bdx2P49nHnWutirevlbgM/view?usp=sharing)
+![REWIND Logo](https://drive.google.com/uc?export=view&id=FILE_ID1q8feaWeGB92bdx2P49nHnWutirevlbgM)
 
 ## 🖥️ About REWIND
 
@@ -27,9 +27,9 @@ More than just a visual homage, REWIND creates an interactive time capsule where
 
 ## 🖼️ Screenshots
 
-![REWIND Desktop](https://drive.google.com/file/d/1f_jlWDANy5lnEtE2UcoLb_98e6FEoFIv/view?usp=sharing)
-![REWIND Features](https://drive.google.com/file/d/1LEvyZe2z5UDQmuiQEaQqSVj10CHtFRnz/view?usp=sharing)
-![About REWIND Applications](https://drive.google.com/file/d/1LEvyZe2z5UDQmuiQEaQqSVj10CHtFRnz/view?usp=sharing)
+![REWIND Desktop](https://drive.google.com/uc?export=view&id=FILE_ID/1f_jlWDANy5lnEtE2UcoLb_98e6FEoFIv)
+![REWIND Features](https://drive.google.com/uc?export=view&id=FILE_ID1LEvyZe2z5UDQmuiQEaQqSVj10CHtFRnz)
+![About REWIND Applications](https://drive.google.com/uc?export=view&id=FILE_ID1LEvyZe2z5UDQmuiQEaQqSVj10CHtFRnz)
 
 ## 🚀 Getting Started
 
@@ -40,7 +40,7 @@ More than just a visual homage, REWIND creates an interactive time capsule where
 
 2. Open `index.html` in your browser to begin your nostalgic journey
 
-3. Alternatively, visit the live site at [https://yourusername.github.io/rewind](https://yourusername.github.io/rewind)
+3. Alternatively, visit the live site at [Rewind Website](https://rewind-ten.vercel.app/)
 
 ## 💾 Installation
 
