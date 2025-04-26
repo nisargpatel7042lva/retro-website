@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import WindowsWindow from './WindowsWindow';
 import WindowsButton from './WindowsButton';
@@ -18,29 +17,42 @@ const GoogleAuthWindow: React.FC<GoogleAuthWindowProps> = ({
   id,
   zIndex
 }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [photos, setPhotos] = useState<any[]>([]);  // State to store photos
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate loading progress
-    const interval = setInterval(() => {
-      setProgress(prev => {
-        const newProgress = prev + 10;
-        if (newProgress >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            setIsLoading(false);
-            onSuccess();
-          }, 500);
-        }
-        return newProgress;
-      });
-    }, 300);
+  const initClient = () => {
+    window.gapi.client.init({
+      
+      clientId: "544715069954-2bin99cp5eluo2hbr838l6c78m99d48e.apps.googleusercontent.com", 
+      scope: "https://www.googleapis.com/auth/photoslibrary.readonly",
+      discoveryDocs: ["https://photoslibrary.googleapis.com/$discovery/rest?version=v1"],
+    });
+  };
+
+  const authenticate = () => {
+    window.gapi.load('client:auth2', () => {
+      initClient();
+      window.gapi.auth2.getAuthInstance()
+        .signIn()
+        .then(() => {
+          console.log("Sign-in successful");
+          onSuccess();    // ✅ trigger success after sign-in
+          getPhotos();
+        })
+        .catch((error: any) => {
+          console.error("Sign-in error", error);
+        });
+    });
+  };
+
+  const getPhotos = async () => {
+    try {
+      const response = await window.gapi.client.photoslibrary.mediaItems.list();
+      console.log(response);
+      setPhotos(response.result.mediaItems || []);  // Save photos
+    } catch (error) {
+      console.error('Error fetching photos', error);
+    }
   };
 
   return (
@@ -52,60 +64,21 @@ const GoogleAuthWindow: React.FC<GoogleAuthWindowProps> = ({
       id={id}
       zIndex={zIndex}
     >
-      {!isLoading ? (
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-          <div className="flex items-center mb-4">
-            <div className="win95-inset p-2 mb-4 text-center font-pixel text-sm text-win95-highlight">
-              <p>Warning: Authentication Required</p>
-              <p className="text-xs mt-2 font-mono text-white">
-                To access your memories, please connect to Google Photos
-              </p>
-            </div>
+      <div className="flex flex-col items-center justify-center p-4">
+        <WindowsButton onClick={authenticate} className="mb-4">
+          Connect to Google Photos
+        </WindowsButton>
+
+        {photos.length > 0 ? (
+          <div className="grid grid-cols-2 gap-2">
+            {photos.map((photo) => (
+              <img key={photo.id} src={photo.baseUrl} alt={photo.filename} className="w-20 h-20 object-cover" />
+            ))}
           </div>
-          
-          <div className="flex flex-col">
-            <label className="text-white text-sm mb-1">Username:</label>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="win95-inset px-2 py-1 text-white outline-none"
-              required
-            />
-          </div>
-          
-          <div className="flex flex-col">
-            <label className="text-white text-sm mb-1">Password:</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="win95-inset px-2 py-1 text-white outline-none"
-              required
-            />
-          </div>
-          
-          <div className="flex justify-end space-x-2 mt-4">
-            <WindowsButton type="button" onClick={onClose}>
-              Cancel
-            </WindowsButton>
-            <WindowsButton type="submit">
-              OK
-            </WindowsButton>
-          </div>
-        </form>
-      ) : (
-        <div className="p-4 flex flex-col items-center">
-          <p className="text-win95-text-green font-mono mb-4">Connecting to Google Photos...</p>
-          <div className="win95-progress w-full mb-2">
-            <div 
-              className="win95-progress-bar" 
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-          <p className="text-xs text-white font-mono mt-2">{progress}% complete</p>
-        </div>
-      )}
+        ) : (
+          <p>No photos found.</p>
+        )}
+      </div>
     </WindowsWindow>
   );
 };
